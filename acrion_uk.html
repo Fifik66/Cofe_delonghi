@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+  new ChiefSlider('.slider');
+      });
+    </script>
+</head>
+<style>
+
+/*options*/
+
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#dosctop_big{
+display: block;
+}
+#dosctop_low{
+display: none;
+}
+#Mobile{
+display: none;
+}
+@media (max-width: 800px){
+  #dosctop_big{
+display: none;
+}
+#dosctop_low{
+display: block;
+}
+#Mobile{
+display: none;
+
+}
+}
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0px 20px;
+  }
+  #dosctop_big{
+    display: none;
+
+}
+#dosctop_low{
+  display: none;
+
+}
+#Mobile{
+  display: block;
+  
+}
+}
+
+/*-options*/
+/*header*/
+/*-header*/
+/*home*/
+.home {
+  position: relative;
+  z-index: 1;
+}
+
+.home .container {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.home-bgr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.home-bgr img {
+  width: 100%;
+}
+
+
+.home-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.home-img_two {
+  display: none;
+}
+
+.home-title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-top: 23px;
+  margin-bottom: 70px;
+}
+
+.home-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 355px;
+  height: 60px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: #0C2340;
+  background: #FFFFFF;
+  border-radius: 50px;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.home-img {
+  width: 355px;
+}
+
+.home-title {
+  font-size: 31px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .home-button:hover {
+    text-decoration: none;
+    outline: none;
+    color: #FFFFFF;
+    background: #0C2340;
+  }
+}
+
+@media (max-width: 800px) {
+ 
+  .home .container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .home-text {
+    position: relative;
+    z-index: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+  }
+  .home-img {
+    display: none;
+  }
+  .home-img_two {
+    display: block;
+    width: 355px;
+  }
+  .home-title {
+    color: #0C2340;
+  }
+  .home-button {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 50px;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .home-text {
+    padding-top: 30px;
+  }
+  .home-img_two {
+    width: 244px;
+  }
+  .home-title {
+    font-size: 21px;
+    margin-top: 10px;
+  }
+  .home-button {
+    width: 264px;
+    height: 50px;
+    font-size: 18px;
+    bottom: 30px;
+  }
+}
+
+/*-home*/
+/*info*/
+.info {
+  padding: 80px 0px;
+}
+
+.info-box {
+  position: relative;
+  z-index: 1;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info-text {
+  width: 450px;
+  min-width: 450px;
+}
+
+.info-title {
+  max-width: 390px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 140%;
+  color: #0C2340;
+  margin-bottom: 20px;
+}
+
+.info-descr {
+  max-width: 390px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #0C2340;
+  margin-bottom: 40px;
+}
+
+.info-subtitle {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #A57851;
+  margin-bottom: 20px;
+}
+
+.info-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.info-li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.info-img {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+.info-span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #0C2340;
+}
+
+.info-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-bgr {
+  position: relative;
+  width: 100%;
+  right: -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-bgr img {
+  display: none;
+  width: 100%;
+}
+
+.info-bgr img:nth-child(2) {
+  display: block;
+}
+
+.info-bgr img:nth-child(3) {
+  display: none;
+}
+
+.info-box.two {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 80px;
+}
+
+.info-box.two .info-bgr {
+  right: auto;
+  left: -50px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.info-box.two .info-text {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+@media (max-width: 1024px) {
+  .info .container {
+    padding: 0px;
+  }
+  .info-box {
+    display: block;
+  }
+  .info-text {
+    min-width: 100%;
+    width: 100%;
+    padding: 0px 50px;
+    margin-bottom: 50px;
+  }
+  .info-title {
+    max-width: 700px;
+  }
+  .info-descr {
+    max-width: 700px;
+  }
+  .info-ul {
+    max-width: 500px;
+  }
+  .info-span {
+    font-size: 16px;
+  }
+  .info-bgr {
+    right: 0;
+  }
+  .info-box.two .info-bgr {
+    right: auto;
+    left: 0;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .info-box.two .info-text {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .info-bgr img:nth-child(2) {
+    display: none;
+  }
+  .info-bgr img:nth-child(3) {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .info {
+    padding: 45px 0px;
+  }
+  .info-text {
+    padding: 0px 20px;
+    margin-bottom: 30px;
+  }
+  .info-title {
+    font-size: 23px;
+    line-height: 140%;
+    margin-bottom: 5px;
+  }
+  .info-descr {
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 20px;
+  }
+  .info-subtitle {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .info-ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .info-li {
+    margin-bottom: 15px;
+  }
+  .info-li:last-child {
+    margin-bottom: 0px;
+  }
+  .info-img {
+    width: 42px;
+    height: 42px;
+    margin-right: 15px;
+  }
+  .info-span {
+    font-size: 14px;
+    line-height: 130%;
+  }
+  .info-box.two {
+    margin-top: 45px;
+  }
+}
+
+/*-info*/
+/*promo*/
+.promo {
+  position: relative;
+  z-index: 1;
+}
+
+.promo .container {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.promo-bgr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.promo-bgr img {
+  width: 100%;
+}
+
+.promo-bgr img:nth-child(1) {
+  display: none;
+}
+
+.promo-bgr img:nth-child(2) {
+  display: block;
+}
+
+.promo-bgr img:nth-child(3) {
+  display: none;
+}
+
+.promo-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.promo-img {
+  width: 355px;
+}
+
+.promo-title {
+  color: #0C2340;
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 150%;
+  text-transform: uppercase;
+  margin-top: 23px;
+  margin-bottom: 30px;
+}
+
+.promo-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 355px;
+  height: 60px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: #FFFFFF;
+  background: #0C2340;
+  border-radius: 50px;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+@media (min-width: 1200px) {
+  .promo-button:hover {
+    text-decoration: none;
+    outline: none;
+    color: #0C2340;
+    background: #FFFFFF;
+  }
+}
+
+@media (max-width: 800px) {
+  .promo-bgr img:nth-child(2) {
+    display: none;
+  }
+  .promo-bgr img:nth-child(3) {
+    display: block;
+  }
+  .promo {
+    padding-top: 250px;
+  }
+  .promo .container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .promo-text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .promo-img {
+    display: block;
+    width: 355px;
+  }
+  .promo-title {
+    color: #0C2340;
+    margin-bottom: 0px;
+  }
+  .promo-button {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 50px;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background: #FFFFFF;
+    color: #0C2340;
+  }
+}
+
+@media (max-width: 600px) {
+  .promo {
+    padding-top: 153px;
+  }
+  .promo-text {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .promo-img {
+    width: 244px;
+  }
+  .promo-title {
+    font-size: 21px;
+    margin-top: 10px;
+  }
+  .promo-button {
+    width: 264px;
+    height: 50px;
+    font-size: 18px;
+    bottom: 30px;
+  }
+}
+
+/*-promo*/
+/*slider*/
+.slider {
+  padding: 80px 0px;
+  display: none;
+}
+.container_coffe{
+  display: grid;
+  margin: 25px auto 25px auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+
+}
+
+
+
+.slider-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.slider-img img {
+  max-width: 100%;
+}
+
+.slider-title {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: #0C2340;
+  margin-bottom: 40px;
+}
+
+.slider-point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 75px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #0C2340;
+  text-align: center;
+  border-bottom: 1px solid rgba(12, 35, 64, 0.2);
+}
+
+.slider-point:nth-child(7) {
+  border-bottom: none;
+}
+
+
+
+
+.slider-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 260px;
+  height: 60px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: #FFFFFF;
+  background: #0C2340;
+  border-radius: 50px;
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  margin: auto;
+  margin-top: 10px;
+}
+.slider-button:hover {
+  text-decoration: none;
+  outline: none;
+  color: #0C2340;
+  background: #FFFFFF;
+}
+
+@media (min-width: 1200px) {
+  .slider-button:hover {
+    text-decoration: none;
+    outline: none;
+    color: #0C2340;
+    background: #FFFFFF;
+
+  }
+
+  .container_coffe{
+  display: grid;
+  margin: 25px auto 25px auto;
+  grid-template-columns: 500px 500px 500px;
+  justify-content: center;
+  grid-gap: 10px;
+
+  }
+}
+
+@media (min-width: 1300px){
+  .container_coffe {
+    display: grid;
+    margin: 25px auto 25px auto;
+    grid-template-columns: 350px 350px 350px;
+    justify-content: center;
+    grid-gap: 50px;
+    overflow: hidden;
+}
+}
+
+@media (max-width: 800px) {
+  .slider-title {
+    margin-bottom: 30px;
+  }
+  .slider-img {
+    margin-bottom: 5px;
+  }
+  .slider-point {
+    height: 60px;
+  }
+  
+}
+@media (max-width: 800px){
+  .container_coffe{
+    grid-template-rows: 1fr 1fr 1rf ;
+    grid-template-columns: 1fr ;
+  }
+  .slider-point {
+    height: 60px;
+    width: 70%;
+    margin: 0 auto;
+}
+ .ecam{
+   margin-bottom: 25px;
+  
+ }
+ 
+}
+
+@media (max-width: 600px) {
+  .slider {
+    padding: 45px 0px;
+  }
+  .slider-title {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .slider-point {
+    font-size: 15px;
+  }
+  .slider-button {
+    height: 50px;
+    font-size: 18px;
+  }
+  
+}
+
+/*-slider*/
+/*video*/
+.video {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 50%;
+}
+
+.video iframe {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 0;
+}
+
+.video-bgr {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video-bgr img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+
+.video-play {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  background: url("acnr/2.svg") center no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (min-width: 1200px) {
+  .video-play:hover {
+    -webkit-transform: translate(-50%, -50%) scale(1.05);
+        -ms-transform: translate(-50%, -50%) scale(1.05);
+            transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+@media (max-width: 800px) {
+  .video {
+    padding-top: 56.25%;
+  }
+  .video-play {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-play {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.big-container {
+    max-width: 1366px;
+    width: calc(100% - 36px);
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+    background-color: inherit;
+    border-radius: 4px;
+}
+*
+{
+    box-sizing: border-box;
+    font-family: Roboto,Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.share__main-content[data-v-af144d98] {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+.main-content__image[data-v-af144d98] {
+    width: 650px;
+    max-width: 650px;
+    margin-right: 33px;
+}
+.main-content__image img[data-v-af144d98] {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+.main-content__body[data-v-af144d98] {
+    max-width: 414px;
+}
+.main-content__body .body__title[data-v-af144d98] {
+    font-size: 32px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+</style>
+<body>  
+    <div class="wrapper">
+        <!--home-->
+        <div class="home">
+         <div class="home-bgr">
+          <img id="dosctop_big" src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/1.jpg" alt="img">
+          <img id="dosctop_low"src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/1_1.jpg" alt="img">
+          <img id="Mobile"src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/1_2.jpg" alt="img">
+         </div>
+         <div class="container">
+          <div class="home-text">
+           <img class="home-img" src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/1.svg" alt="img">
+           <img class="home-img_two" src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/1_1.svg" alt="img">
+           <div class="home-title">Кофе – это De’Longhi</div>
+           <a href="https://www.citrus.ua/tehnika-dlya-kofe/brand-delonghi/" target="_blank" class="home-button">Подивитися всі моделі</a>
+          </div>
+         </div>
+        </div>
+        <!--/home-->
+        <!--info-->
+        <div class="info">
+         <div class="container">
+          <div class="info-box">
+           <div class="info-text">
+            <div class="info-title">Короткометражний фільм з Амбасадор - ексклюзивно для вас</div>
+            <div class="info-descr">Історія про смак, виняткових відчуттях і задоволенні. Це історія Perfetto, в якій Бред насолоджується кавовим моментом від Делонги.</div>
+            <div class="info-subtitle">Eспрессо</div>
+            <div class="info-ul">
+             <div class="info-li">
+              <img class="info-img" src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/2.svg" alt="img">
+              <div class="info-span">Правильна пінка<br> крему горіхового кольору</div>
+             </div>
+             <div class="info-li">
+              <img class="info-img" src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/2_1.svg" alt="img">
+              <div class="info-span">Щільне, округле<br> тіло</div>
+             </div>
+            </div>
+           </div>
+           <div class="info-bgr">
+            <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/2_1_2.jpg" alt="img">
+            <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/2_1_1.jpg" alt="img">
+            <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/2_1_2.jpg" alt="img">
+           </div>
+          </div>
+          <div class="info-box two">
+           <div class="info-text">
+            <div class="info-title">Ключ до ідеального кавового моменту</div>
+            <div class="info-descr">Свіжий кавовий смак і аромат у вас вдома - в будь-який час дня і ночі. Чудовий результат в чашці - від еспресо до латте.</div>
+            <div class="info-subtitle">Молочные напитки</div>
+            <div class="info-ul">
+             <div class="info-li">
+              <img class="info-img" src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/4.svg" alt="img">
+              <div class="info-span">Щільна і ніжна<br> молочна піна</div>
+             </div>
+             <div class="info-li">
+              <img class="info-img" src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/4_1.svg" alt="img">
+              <div class="info-span">Ідеальні пропорції<br> кави і молока</div>
+             </div>
+            </div>
+           </div>
+           <div class="info-bgr">
+            <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/3_1_2.jpg" alt="img">
+            <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/3_1_1.jpg" alt="img">
+            <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/3_1_2.jpg" alt="img">
+           </div>
+          </div>
+         </div>
+        </div>
+        <!--/info-->
+        <!--promo-->
+        <div class="promo">
+         <div class="container">
+          <div class="promo-text">
+           <img class="promo-img" src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/1_1.svg" alt="img">
+           <div class="promo-title">Кава - це De'Longhi</div>
+           <a href="https://www.citrus.ua/tehnika-dlya-kofe/brand-delonghi/" target="_blank" class="promo-button">Подивитися всі моделі</a>
+          </div>
+         </div>
+         <div class="promo-bgr">
+          <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/1_3.jpg" alt="img">
+          <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/1_3_3.jpg" alt="img">
+          <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/1_2_3.jpg" alt="img">
+         </div>
+        </div>
+
+        <div class="container_coffe" >
+        <div class="ecam">
+                <div class="slider-img">
+                    <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/1.png" alt="img">
+              </div>
+              <div class="slider-title">ECAM 370.85</div>
+              <div class="slider-point">13 ступенів помелу</div>
+              <div class="slider-point">LatteCrema System</div>
+              <div class="slider-point">Управління зі смартфона</div>
+              <div class="slider-point">3 призначених для користувача профілю</div>
+              <div class="slider-point">13 рецептів</div>
+              <a href="https://www.citrus.ua/tehnika-dlya-kofe/kofemashina-delonghi-ecam-37085sb-696242.html" target="_blank" class="slider-button">Купити</a></div>
+
+
+        <div class="ecam">
+              <div class="slider-img">
+                    <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/2.png" alt="img">
+              </div>
+              <div class="slider-title">ECAM 610.55</div>
+              <div class="slider-point">Bean Adapt і електронний контроль ступеня помелу</div>
+              <div class="slider-point">LatteCrema System</div>
+              <div class="slider-point">Управління зі смартфона</div>
+              <div class="slider-point">5 призначених для користувача профілів</div>
+              <div class="slider-point">18 рецептів</div>
+              <a href="https://www.citrus.ua/tehnika-dlya-kofe/kofemashina-delonghi-ecam-35015-b-676551.html" target="_blank" class="slider-button">Купити</a></div>
+
+
+        <div class="ecam" id='ecam_three'>
+              <div class="slider-img">
+                <img src="https://i.citrus.ua/uploads/content/product-photos/epner/668834/de-longhi/3.png" alt="img">
+              </div>
+              <div class="slider-title">ECAM 350.55</div>
+              <div class="slider-point">13 ступенів помелу</div>
+              <div class="slider-point">LatteCrema System</div>
+              <div class="slider-point">My Menu</div>
+              <div class="slider-point">Tubeless для свіжості смаку</div>
+              <div class="slider-point">8 рецептів</div>
+              <a href="https://www.citrus.ua/tehnika-dlya-kofe/kofemashina-delonghi-ecam-35055-sb-680120.html" target="_blank" class="slider-button">Купити</a>
+        </div>
+      </div>
+        <!--/slider-->
+        <!--video-->
+        <div class="video">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/qN1bvHqrYeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!--/video-->
+        </div>
+
+    </body>
+</html>
